@@ -4,11 +4,19 @@ const cleanBaseURL = require('clean-base-url');
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
+const premberConfig = require('prember/lib/config');
 
 module.exports = {
   name: 'prember-middleware',
 
+  premberConfig,
+
   serverMiddleware({ app, options }) {
+    let config = this.premberConfig();
+    if (!config.enabled) {
+      return;
+    }
+
     let { watcher } = options;
     let baseURL = options.rootURL === '' ? '/' : cleanBaseURL(options.rootURL || options.baseURL);
 
