@@ -1,17 +1,17 @@
 {
   "name": "prember-middleware",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "ember-cli middleware that helps test prember",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Edward Faulkner <edward@eaf4.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/ef4/prember-middleware",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -44,7 +44,7 @@
     "loader.js": "^4.2.3"
   },
   "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+    "node": "6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
